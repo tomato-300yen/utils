@@ -38,7 +38,7 @@ def main(csv_path, from_column, to_column):
 
         # get filename
         try:
-            df_trg_pdf_name = df[df[from_column] == pdf_name]
+            df_trg_pdf_name = df[df[from_column] == pdf_name]["after"]
             if len(df_trg_pdf_name) != 1:
                 raise KeyError
         except KeyError:
